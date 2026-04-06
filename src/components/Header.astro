@@ -4,6 +4,7 @@ import { siteConfig } from "../config";
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+const hasPublications = siteConfig.publications && siteConfig.publications.length > 0;
 ---
 
 <header
@@ -12,6 +13,14 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 >
   <nav class="max-w-7xl mx-auto px-8 py-4">
     <ul class="flex items-center gap-8 justify-center">
+      <li>
+        <a
+          href="#hero"
+          class="text-gray-700 hover:text-black transition-colors font-medium"
+        >
+          Home
+        </a>
+      </li>
       <li>
         <a
           href="#about"
@@ -45,6 +54,18 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         )
       }
       {
+        hasPublications && (
+          <li>
+            <a
+              href="#publications"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Publications
+            </a>
+          </li>
+        )
+      }
+      {
         hasEducation && (
           <li>
             <a
@@ -56,6 +77,24 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           </li>
         )
       }
+      <li>
+        <a
+          href="#skills"
+          class="text-gray-700 hover:text-black transition-colors font-medium"
+        >
+          Skills
+        </a>
+      </li>
+      <li>
+        <a
+          href="/asset/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-700 hover:text-black transition-colors font-medium"
+        >
+          Resume
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
